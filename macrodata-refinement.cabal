@@ -19,11 +19,14 @@ executable macrodata-refinement
     import:           warnings
     main-is:          Main.hs
     -- other-modules:
-    -- other-extensions:
+    default-extensions: BangPatterns
+                        RecordWildCards
+
     build-depends:      base >=4.14 && <5
                       , ansi-terminal
                       , deepseq
                       , random
+                      , text
 
     hs-source-dirs:   app
     default-language: Haskell2010
