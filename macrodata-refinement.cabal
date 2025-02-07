@@ -1,0 +1,31 @@
+cabal-version:      3.0
+name:               macrodata-refinement
+version:            0.1.0.0
+-- synopsis:
+-- description:
+license:            Unlicense
+author:             Michael Karg
+maintainer:         mgoremeier@gmail.com
+-- copyright:
+category:           Graphics
+build-type:         Simple
+-- extra-doc-files:
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall
+
+executable macrodata-refinement
+    import:           warnings
+    main-is:          Main.hs
+    -- other-modules:
+    -- other-extensions:
+    build-depends:      base >=4.14 && <5
+                      , ansi-terminal
+                      , deepseq
+                      , random
+
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
+    ghc-options:      -O2 -threaded -with-rtsopts "-N1"
